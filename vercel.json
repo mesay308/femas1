@@ -5,6 +5,20 @@
     {
       "source": "/api/:path*",
       "destination": "/api"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "/api"
     }
-  ]
+  ],
+  "env": {
+    "DB_HOST": "185.73.8.1",
+    "DB_PORT": "3306",
+    "DB_USER": "VAMAdmin",
+    "DB_PASS": "d7GMW}am~SYZJhRv",
+    "DB_NAME": "femas",
+    "JWT_SECRET": "CHANGE_ME_to_a_random_64_character_string_minimum",
+    "JWT_EXPIRES_IN": "24h",
+    "BCRYPT_SALT_ROUNDS": "12"
+  }
 }
