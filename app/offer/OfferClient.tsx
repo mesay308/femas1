@@ -235,36 +235,48 @@ export default function OfferClient() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 pb-20">
       {/* Sticky Header */}
       <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 print:hidden">
-        <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-              Femaslux
-            </span>
-            <span className="text-sm font-medium px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
-              Proposal
-            </span>
-          </div>
-          
+        <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-end">
           <div className="flex items-center gap-4">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              className="flex items-center justify-center p-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              title="Download PDF"
             >
-              <Download className="w-4 h-4" />
-              <span className="hidden sm:inline">Download PDF</span>
+              <Download className="w-5 h-5" />
             </button>
             
             <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
               <button
                 onClick={() => setLang("en")}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${lang === 'en' ? 'bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
+                className={`flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md transition-all ${lang === 'en' ? 'bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
               >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" className="w-5 h-auto rounded-sm overflow-hidden border border-gray-200 dark:border-gray-600">
+                  <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                  <clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath>
+                  <g clipPath="url(#s)">
+                    <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+                  </g>
+                </svg>
                 English
               </button>
               <button
                 onClick={() => setLang("am")}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${lang === 'am' ? 'bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
+                className={`flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md transition-all ${lang === 'am' ? 'bg-white dark:bg-gray-700 shadow-sm text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'}`}
               >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" className="w-5 h-auto rounded-sm overflow-hidden border border-gray-200 dark:border-gray-600">
+                  <rect width="1200" height="600" fill="#DA121A"/>
+                  <rect width="1200" height="400" fill="#FCDD09"/>
+                  <rect width="1200" height="200" fill="#078930"/>
+                  <circle cx="600" cy="300" r="120" fill="#0F47AF"/>
+                  <g fill="#FCDD09" transform="translate(600,300) scale(40)">
+                    <polygon points="0,-2.5 0.587,-0.691 2.377,-0.691 0.929,0.36 1.48,2.26 0,1.184 -1.48,2.26 -0.929,0.36 -2.377,-0.691 -0.587,-0.691"/>
+                    <path stroke="#0F47AF" strokeWidth="0.15" d="M0,-2.5 L0,1.184 M0.587,-0.691 L-1.48,2.26 M2.377,-0.691 L-0.929,0.36 M0.929,0.36 L-2.377,-0.691 M1.48,2.26 L-0.587,-0.691" />
+                  </g>
+                </svg>
                 አማርኛ
               </button>
             </div>
